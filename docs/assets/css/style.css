@@ -431,6 +431,11 @@ html {
   color: #000;
 }
 
+@media (max-width: 1119px) {
+  .sub-title-section {
+    font-size: 1.2rem;
+}
+
 @media (max-width: 960px) {
   .container {
     max-width: 930px;
