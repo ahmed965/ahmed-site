@@ -1,7 +1,6 @@
 (function (global) {
   const navbar = document.querySelector(".navbar");
   const mobileMenu = document.querySelector(".mobile-menu");
-  const burgerMenu = document.querySelector(".burger-menu");
   const mobileMenuContainer = document.querySelector(".mobile-menu-container");
   const nvabarOffsetTop = navbar.offsetTop;
   const navbarHeight = navbar.offsetHeight;
@@ -10,12 +9,8 @@
   const progressProcents = document.querySelectorAll(".progress-procent");
   const progressBars = document.querySelectorAll(".progress-bar");
   const arryProcent = [90, 85, 83, 83, 80, 60];
-  const titleSectionOffsetTop = document.querySelector(".section-1 .title-section").offsetTop;
-  const progressbarWrapper = document.querySelector(".progress-bar-wrapper");
-  const progressbarWrapperFromTop = progressbarWrapper.offsetTop + progressbarWrapper.offsetHeight;
   const experiences = document.querySelectorAll(".experience");
-  const expercienceFromTop = experience.offsetTop + experience.offsetHeight;
-
+ 
   window.addEventListener("scroll", stickyHeader);
   window.addEventListener("scroll", activeSection);
   window.addEventListener("scroll", activeScrollbar);
@@ -32,23 +27,24 @@
   }
 
   function activeSection() {
-    sections.forEach((section, i) => {
-      if (window.scrollY >= section.offsetTop - 10) {
+    let current = "";
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
+      if (window.scrollY >= sectionTop - sectionHeight / 3) {
+        let current = section.getAttribute("data-id");
         navLinks.forEach((link) => {
           link.classList.remove("active");
+          document.querySelector('#' + current).classList.add("active");
         });
-        navLinks[i].classList.add("active");
       }
     });
   }
 
   function activeScrollbar() {
-    progressBars.forEach((el, i) => {
-      if (window.scrollY >= titleSectionOffsetTop && window.scrollY <= progressbarWrapperFromTop) {
-        let scrollProcent = (el.getBoundingClientRect().y / window.innerHeight) * 100;
-        if (scrollProcent < 95) {
+    progressBars.forEach((progressBar, i) => {
+      if (progressBar.getBoundingClientRect().top >=0 && progressBar.getBoundingClientRect().top <= window.innerHeight) {
           progressProcents[i].style.width = arryProcent[i] + "%";
-        }
       } else {
         progressProcents[i].style.width = 0;
       }
@@ -67,12 +63,8 @@
 
   function showExperience() {
     experiences.forEach((experience) => {
-      const experienceFromTopHalf = experience.offsetTop + experience.offsetHeight / 2;
-      if (window.scrollY >= progressbarWrapperFromTop && window.scrollY <= experienceFromTopHalf) {
-        let scrollProcent = (experience.getBoundingClientRect().y / window.innerHeight) * 100;
-        if (scrollProcent < 80) {
+      if (experience.getBoundingClientRect().top >=0 && experience.getBoundingClientRect().top <= window.innerHeight) {
           experience.classList.add("show");
-        }
       } else {
         experience.classList.remove("show");
       }
