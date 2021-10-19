@@ -1,3 +1,3 @@
 # ahmed-site
-that's my portfolio site web.
+This my portfolio website.
 this site uses HTML, CSS and javaScript
