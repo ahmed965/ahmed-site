@@ -32,7 +32,7 @@
       const sectionTop = section.offsetTop;
       const sectionHeight = section.clientHeight;
       if (window.scrollY >= sectionTop - sectionHeight / 3) {
-        let current = section.getAttribute("data-id");
+        current = section.getAttribute("data-id");
         navLinks.forEach((link) => {
           link.classList.remove("active");
           document.querySelector('#' + current).classList.add("active");
