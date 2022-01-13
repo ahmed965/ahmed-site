@@ -356,7 +356,7 @@ html {
   max-width: 33.33%;
   position: relative;
   padding: 0px 0.6rem;
-  transition: opacity 1.5s;
+  transition: all 1.5s;
 }
 
 .experience > div {
@@ -365,14 +365,24 @@ html {
   height: 100%;
 }
 
+.experience.hide:first-child {
+  opacity: 0;
+  transform: translateX(-1000px) scale(1.2);
+}
+
 .experience.hide {
   opacity: 0;
   transform: scale(1.2);
 }
 
+.experience.hide:last-child {
+  opacity: 0;
+  transform: translateX(1000px) scale(1.2);
+}
+
 .experience.show {
   opacity: 1;
-  transform: scale(1);
+  transform: translateY(0) scale(1);
 }
 
 .image-experience {
@@ -465,6 +475,12 @@ html {
     flex: 0 0 50%;
     max-width: 50%;
     margin-bottom: 3rem;
+  }
+ 
+  .experience.hide:first-child,
+  .experience.hide:last-child {
+    opacity: 0;
+    transform: scale(1.2);
   }
 
   .image-experience {
