@@ -9,7 +9,7 @@
   </head>
   <body>
     <section class="section-1" id="introduction" data-id="introduction-link">
-      <div class="container d-flex-col d-flex-center">
+      <div class="container d-flex-col d-flex-center d-flex">
         <h1 class="title-section dark bg-beige border-bottom-beige padding-medium medium-margin-bottom skew">Web developer</h1>
         <div class="image-warpper">
           <img class="image-section-1" src="./assets/images/ahmed.jpg" />
@@ -18,8 +18,8 @@
         <a class="btn-section-1" href="#experience">Experience</a>
       </div>
     </section>
-    <nav class="navbar bg-beige d-flex-center">
-      <ul class="d-flex-center container">
+    <nav class="navbar bg-beige d-flex-center d-flex">
+      <ul class="d-flex-center d-flex container">
         <li><a class="navbar-links" href="#introduction" id="introduction-link">Home</a></li>
         <li><a class="navbar-links" href="#aboutMe" id="aboutMe-link">About</a></li>
         <li><a class="navbar-links" href="#experience" id="experience-link">Experience</a></li>
@@ -33,7 +33,7 @@
         <div class="burger-menu-content"></div>
         <div class="burger-menu-bottom"></div>
       </div>
-      <div class="mobile-menu-container bg-beige d-flex-around d-flex-col">
+      <div class="mobile-menu-container bg-beige d-flex-around d-flex d-flex-col">
         <div><a class="navbar-links" href="#introduction">Home</a></div>
         <div><a class="navbar-links" href="#aboutMe">About</a></div>
         <div><a class="navbar-links" href="#experience">Experience</a></div>
@@ -41,8 +41,8 @@
       </div>
     </nav>
    
-    <section class="sections bg-wihte padding-section" id="aboutMe" data-id="aboutMe-link">
-      <div class="container d-flex-col d-flex-center">
+    <section class="sections bg-white padding-section" id="aboutMe" data-id="aboutMe-link">
+      <div class="container d-flex-center d-flex d-flex-col">
         <h1 class="title-section dark border-bottom-black medium-margin-bottom">About me</h1>
         <p class="description medium-margin-bottom">Hello i'm Ahmed Bouzguenda, a Tunisien web developer working in Germany. Development changed my life, it's now more interessant.</p>
         <div class="progress-bar-wrapper large-margin-bottom">
@@ -71,7 +71,7 @@
             <div class="progress-procent bg-beige"></div>
           </div>
         </div>
-        <div class="services wrap-flex d-flex-evenly">
+        <div class="services wrap-flex d-flex-evenly d-flex">
           <div class="text-center service">
             <i class="far fa-lightbulb"></i>
             <h4 class="service-heading skew">Creative</h4>
@@ -92,31 +92,37 @@
       </div>
     </section>
     <section class="sections bg-beige padding-section overflow-x-hidden" id="experience" data-id="experience-link">
-      <div class="container d-flex-center d-flex-col">
+      <div class="container d-flex-center d-flex d-flex-col">
         <h1 class="title-section dark border-bottom-black medium-margin-bottom">Experience</h1>
-        <div class="experiences wrap-flex d-flex-center large-margin-bottom">
+        <div class="experiences wrap-flex d-flex large-margin-bottom">
           <div class="experience">
-            <img class="image-experience" src="./assets/images/library.jpg" />
-            <div class="description-experience text-center">
-              <h3 class="sub-title-section">Carthage Edition</h3>
-              <p class="semi-bold text-center">Team leader</p>
-              <p class="semi-bold text-center">2014 - 2017</p>
+            <div class="bg-white d-flex d-flex-col">
+              <img class="image-experience" src="./assets/images/library.jpg" />
+              <div class="padding-medium text-center">
+                <h3 class="sub-title-section">Carthage Edition</h3>
+                <p><strong>Team leader:</strong> Administrative tasks, communication with the team and with customers.</p>
+                 <p class="text-right"><small>2014 - 2017</small>
+              </div>
             </div>
           </div>
-          <div class="experience d-flex">
-            <img class="image-experience" src="./assets/images/web2.jpg" />
-            <div class="description-experience text-center">
-              <h3 class="sub-title-section">Web Service</h3>
-              <p class="semi-bold text-center">Web Developer</p>
-              <p class="semi-bold text-center">2018 - 2019</p>
+          <div class="experience">
+            <div class="bg-white d-flex d-flex-col">
+              <img class="image-experience" src="./assets/images/web2.jpg" />
+              <div class="padding-medium text-center">
+                <h3 class="sub-title-section">Web Service</h3>
+                <p><strong>Web Developer:</strong> Development websites with CMS wordpress and reparing bugs for customer's websites.</p>
+                <p class="text-right"><small>2018 - 2019</small></p>
+              </div>
             </div>
           </div>
-          <div class="experience d-flex">
-            <img class="image-experience" src="./assets/images/web1.jpg" />
-            <div class="description-experience text-center">
-              <h3 class="sub-title-section">System4all</h3>
-              <p class="semi-bold text-center">Web Developer</p>
-              <p class="semi-bold text-center">2019 - actuel</p>
+          <div class="experience">
+            <div class="bg-white d-flex d-flex-col">
+              <img class="image-experience" src="./assets/images/web1.jpg" />
+              <div class="padding-medium text-center">
+                <h3 class="sub-title-section">System4all</h3>
+                <p><strong>Web Developer:</strong> Development new and further websites in frontend and backend areas, testing and code reviews</p>
+                <p class="text-right"><small>2019 - actuel</small></p>
+              </div>
             </div>
           </div>
         </div>
@@ -124,7 +130,7 @@
       </div>
     </section>
     <section class="padding-section" id="education" data-id="education-link">
-      <div class="container d-flex-center d-flex-col">
+      <div class="container d-flex-center d-flex d-flex-col">
         <h1 class="title-section dark border-bottom-black medium-margin-bottom">Education</h1>
         <div class="education large-margin-bottom">
           <h2 class="education-title">High school diploma in computer science</h2><small class="light">July 2009</small>
@@ -137,7 +143,7 @@
       </div>
     </section>
     <footer class="sections padding-section bg-dark" id="contact">
-      <div class="container d-flex-center d-flex-col">
+      <div class="container d-flex-center d-flex d-flex-col">
         <h1 class="title-section white border-bottom-white medium-margin-bottom">CONTACT ME</h1>
         <p class="description white medium-margin-bottom">I am available for hire and open to any ideas of cooperation. feel free to contact me. Below are my social pages and my email:</p>
         <div class="social-media medium-margin-bottom">

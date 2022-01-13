@@ -67,9 +67,11 @@
   function showExperience() {
     experiences.forEach((experience) => {
       if (experience.getBoundingClientRect().top >= 0 && experience.getBoundingClientRect().top <= window.innerHeight) {
+        experience.classList.remove("hide");
         experience.classList.add("show");
       } else {
         experience.classList.remove("show");
+        experience.classList.add("hide");
       }
     });
   }

@@ -18,7 +18,7 @@ html {
   background-color: #ede1bf;
 }
 
-.bg-wihte {
+.bg-white {
   background-color: #fff;
 }
 
@@ -70,9 +70,10 @@ html {
   text-align: center;
 }
 
-.semi-bold {
-  font-weight: 600;
+.text-right {
+  text-align: right;
 }
+
 
 .light {
   font-weight: 300;
@@ -104,19 +105,16 @@ html {
 }
 
 .d-flex-center {
-  display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .d-flex-evenly {
-  display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
 
 .d-flex-around {
-  display: flex;
   justify-content: space-around;
   align-items: center;
 }
@@ -354,12 +352,17 @@ html {
 }
 
 .experience {
-  flex: 33.33%;
+  flex: 0 0 33.33%;
   max-width: 33.33%;
   position: relative;
   padding: 0px 0.6rem;
-  transition: box-shadow 0.3s;
-  transition: opacity 1.5s, transform 1.5s;
+  transition: opacity 1.5s;
+}
+
+.experience > div {
+  border-radius: 0.3rem;
+  border: 1px solid rgba(0,0,0,.125);
+  height: 100%;
 }
 
 .experience.hide {
@@ -377,27 +380,8 @@ html {
   transition: opacity 0.3s;
 }
 
-.description-experience {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s;
-}
-
-.experience:hover .description-experience {
-  opacity: 1;
-  visibility: visible;
-}
-
 .experience:hover .image-experience {
   opacity: 0.2;
-}
-
-.experience:hover {
-  box-shadow: 0.5rem 0.5rem 0.5rem #777;
 }
 
 .education {
@@ -449,7 +433,7 @@ html {
   }
 
   .service {
-    flex: 50%;
+    flex:0 0 50%;
     max-width: 50%;
     margin-bottom: 3rem;
   }
@@ -478,7 +462,7 @@ html {
   }
 
   .experience {
-    flex: 50%;
+    flex: 0 0 50%;
     max-width: 50%;
     margin-bottom: 3rem;
   }
@@ -515,7 +499,7 @@ html {
 
   .experience,
   .service {
-    flex: 100%;
+    flex: 0 0 100%;
     max-width: 100%;
   }
 
